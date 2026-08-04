@@ -55,18 +55,27 @@ inline csrGraph graphToCSR(const string & inputFile) {
     int count = 0;
     while (count < n && getline(file, line)) {
 
-        if (line.empty()) continue;
+        if (line.empty()){
+
+         continue;
+    }
 
         stringstream ss(line);
         int srcNode, deg;
-        ss >> srcNode >> deg;
+        if (!(ss >> srcNode >> deg)) {
+
+        continue;
+    }
 
         for (int i = 0; i < deg; i++) {
 
             int destNode;
             int wt = 1;
 
-            ss >> destNode;
+            if (!(ss >> destNode)) {
+
+            break;
+            }
 
             // Dynamically handle unweighted 
             if (ss >> wt) {
@@ -74,6 +83,7 @@ inline csrGraph graphToCSR(const string & inputFile) {
                 adj[srcNode].push_back({destNode, wt});
             } else {
 
+                ss.clear();
                 // Default weight = 1
                 adj[srcNode].push_back({destNode, 1}); 
             }
@@ -87,7 +97,9 @@ inline csrGraph graphToCSR(const string & inputFile) {
     int totalEdges = 0;
     for (int i = 0; i < n; i++) {
         graph.rowPtr[i] = totalEdges;
+        
         for (auto& edge : adj[i]) {
+
             graph.colIndic.push_back(edge.first);
             graph.valList.push_back(edge.second);
             totalEdges++;
