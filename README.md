@@ -30,4 +30,15 @@ assignment_01/
 
 9.2 Graph Results Table
 
-AlgorithmFile NameVertices (V)Edges (E)Input TypeSourceExpected OutputActual OutputTimeStatusBFSbfs_10.txt1015Unweighted adjacency list0Traversal / distancesTraversal / distances0 msPassBFSbfs_100.txt100250Unweighted adjacency list0Traversal / distancesTraversal / distances0 msPassBFSbfs_10000.txt10,00030,000Unweighted adjacency list0Traversal / distancesTraversal / distances0 msPassBFSbfs_50000.txt50,000150,000Unweighted adjacency list0Traversal / distancesTraversal / distances2.004 msPassBFSbfs_100000.txt100,000300,000Unweighted adjacency list0Traversal / distancesTraversal / distances4.120 msPassDFSdfs_10.txt1015Unweighted adjacency list0TraversalTraversal0 msPassDFSdfs_100.txt100250Unweighted adjacency list0TraversalTraversal0 msPassDFSdfs_10000.txt10,00030,000Unweighted adjacency list0TraversalTraversal0 msPassDFSdfs_50000.txt50,000150,000Unweighted adjacency list0TraversalTraversal1.001 msPassDFSdfs_100000.txt100,000300,000Unweighted adjacency list0TraversalTraversal3.006 msPassSSSPsssp_10.txt1015Positive weighted adjacency list0Shortest distancesShortest distances0 msPassSSSPsssp_100.txt100250Positive weighted adjacency list0Shortest distancesShortest distances0 msPassSSSPsssp_10000.txt10,00030,000Positive weighted adjacency list0Shortest distancesShortest distances0 msPassSSSPsssp_50000.txt50,000150,000Positive weighted adjacency list0Shortest distancesShortest distances0 msPassSSSPsssp_100000.txt100,000300,000Positive weighted adjacency list0Shortest distancesShortest distances0 msPass
+| Algorithm | Test File | Vertices | Edges | Input Type | Source | Expected Output | Actual Output | Time | Status |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| BFS | bfs_10.txt | 10 | 15 | Unweighted adjacency list | 0 | Traversal / distances | Traversal / distances | Traversal / distance | 0 |
+| msPass | bfs_100.txt | 100 | 250 | Unweighted adjacency list | 0 | Traversal / distances | Traversal / distances | 0 | msPass |
+| BFS | bfs_50000.txt | 50000 | 150000 | Unweighted adjacency list | 0 | Traversal / distances | Traversal / distances | 4.120 | msPass |
+| DFS | dfs_10.txt | 10 | 15 | Unweighted adjacency list | 10 | Traversal | Traversal | 0 | msPass |
+| DFS | dfs_100.txt | 100 | 250 | Unweighted adjacency list | 100 | Traversal | Traversal | 0 | msPass |
+| DFS | dfs_10000.txt | 10000 | 30000 | Unweighted adjacency list | 10000 | Traversal | Traversal | 13.006 | msPass |
+| SSSP | sssp_10.txt | 10 | 15 | Positive weighted adjacency list | 0 | Shortest distances | Shortest distances | 0 | msPass |
+| SSSP | sssp_100.txt | 100 | 250 | Positive weighted adjacency list | 0 | Shortest distances | Shortest distances | 0 | msPass |
+| SSSP | sssp_10000.txt | 10000 | 30000 | Positive weighted adjacency list | 10000 | Shortest distances | Shortest distances | 0 | msPass |
+| SSSP | sssp_50000.txt | 50000 | 150000 | Positive weighted adjacency list | 50000 | Shortest distances | Shortest distances | 0 | msPass |
