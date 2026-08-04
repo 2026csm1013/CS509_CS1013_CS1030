@@ -10,7 +10,7 @@
 using  namespace   std;
 
 // Helper funct
-int getSourceNode(string fileName) {
+int getSNode(string fileName) {
 
     ifstream file(fileName);
 
@@ -46,12 +46,12 @@ int main(int argc, char* argv[]) {
 
    csrGraph graph = graphToCSR(filePath);
 
-    int srcNode = getSourceNode(filePath);
+    int srcNode = getSNode(filePath);
 
-    int numVertices = graph.numNodes;
+    int numVt = graph.numNodes;
     
-    vector<int> dist(numVertices, -1);
-    vector<int> orderVisited;
+    vector<int> dist(numVt, -1);
+    vector<int> ordrvisted;
 
     // strt exec time
     auto tStart = chrono:: high_resolution_clock::now( );
@@ -67,7 +67,7 @@ int main(int argc, char* argv[]) {
 
         int currNode = bfsQueue.front( );
         bfsQueue.pop( );
-        orderVisited.push_back( currNode );
+        ordrvisted.push_back( currNode );
 
         // Travers neighbr nod
         int startIdx = graph.rowPtr[currNode];
@@ -76,13 +76,13 @@ int main(int argc, char* argv[]) {
 
         for (int i = startIdx; i < endIdx; i++) {
 
-            int neighbor = graph.colIndic[i];
+            int neigbr = graph.colIndic[i];
             
             // neighbr not visit yet if
-            if (dist[neighbor] == -1) {
+            if (dist[neigbr] == -1) {
 
-                dist[neighbor] = dist[currNode] + 1;
-                bfsQueue.push(neighbor);
+                dist[neigbr] = dist[currNode] + 1;
+                bfsQueue.push(neigbr);
             }
 
          }
@@ -101,14 +101,14 @@ int main(int argc, char* argv[]) {
 
     cout << "Traversal: ";
 
-    for (size_t i = 0; i < orderVisited.size(); i++) {
-        cout << orderVisited[i] << " ";
+    for (size_t i = 0; i < ordrvisted.size(); i++) {
+        cout << ordrvisted[i] << " ";
     }
     cout << endl;
 
     cout << "Distances:" << endl;
 
-    for (int i = 0; i < numVertices; i++) {
+    for (int i = 0; i < numVt; i++) {
         cout << i << " " << dist[i] << endl;
     }
 
