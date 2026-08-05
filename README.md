@@ -40,6 +40,6 @@ assignment_01/
 | | dfs_100.txt | 100 | 250 | Unweighted adjacency list | 100 | Traversal | Traversal | 0 | msPass |
 | | dfs_10000.txt | 10000 | 30000 | Unweighted adjacency list | 10000 | Traversal | Traversal | 13.006 | msPass |
 | **SSSP** | sssp_10.txt | 10 | 15 | Positive weighted adjacency list | 0 | Shortest distances | Shortest distances | 0.0042 | ms Pass |
-| | sssp_100.txt | 100 | 250 | Positive weighted adjacency list | 0 | Shortest distances | Shortest distances |  0.0042 | msPass |
-| | sssp_10000.txt | 10000 | 30000 | Positive weighted adjacency list | 10000 | Shortest distances | Shortest distances | 4.6394 | msPass |
-| | sssp_50000.txt | 50000 | 150000 | Positive weighted adjacency list | 50000 | Shortest distances | Shortest distances | 35.4073 | msPass |
+| | sssp_100.txt | 100 | 250 | Positive weighted adjacency list | 0 | Shortest distances | Shortest distances |  0.0042 | ms Pass |
+| | sssp_10000.txt | 10000 | 30000 | Positive weighted adjacency list | 10000 | Shortest distances | Shortest distances | 4.6394 | ms Pass |
+| | sssp_50000.txt | 50000 | 150000 | Positive weighted adjacency list | 50000 | Shortest distances | Shortest distances | 35.4073 | ms Pass |
