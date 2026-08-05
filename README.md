@@ -43,3 +43,4 @@ assignment_01/
 | | sssp_100.txt | 100 | 250 | Positive weighted adjacency list | 0 | Shortest distances | Shortest distances |  0.0042 | ms Pass |
 | | sssp_10000.txt | 10000 | 30000 | Positive weighted adjacency list | 10000 | Shortest distances | Shortest distances | 4.6394 | ms Pass |
 | | sssp_50000.txt | 50000 | 150000 | Positive weighted adjacency list | 50000 | Shortest distances | Shortest distances | 35.4073 | ms Pass |
+| | sssp_100000.txt | 100000 | 300000 | Positive weighted adjacency list | 100000 | Shortest distances | Shortest distances | 64.9651 | ms Pass |
