@@ -2,24 +2,28 @@
 #include <queue>
 #include <utility>
 
-// Dijkstra's algorithm with a min-heap (lazy deletion: stale, outdated
-// entries are simply skipped when popped rather than removed from the
-// heap directly, since std::priority_queue doesn't support decrease-key).
+using namespace std;
 
-SSSPResult sssp(const CSRGraph &g, int source)
+// Dijkstra's algorithm with a min-heap
+
+SSSPResult sssp(const CSRGraph &csr_graph, int source)
 {
   SSSPResult result;
-  result.distance.assign(g.V, SSSP_UNREACHABLE);
-  result.predecessor.assign(g.V, -1);
 
-  if (source < 0 || source >= g.V)
+  result.distance.assign(csr_graph.V, SSSP_UNREACHABLE);
+
+  result.pre_decessor.assign(csr_graph.V, -1);
+
+  if (source < 0 || source >= csr_graph.V)
   {
     return result;
   }
 
-  // Min-heap of (distance, vertex), smallest distance on top.
-  using PQEntry = std::pair<double, int>;
-  std::priority_queue<PQEntry, std::vector<PQEntry>, std::greater<PQEntry>> pq;
+  // min-heap of (distance, vertex).
+
+  using PQEntry = pair<double, int>;
+
+  priority_queue<PQEntry, vector<PQEntry>, greater<PQEntry>> pq;
 
   result.distance[source] = 0.0;
   pq.push({0.0, source});
@@ -29,19 +33,20 @@ SSSPResult sssp(const CSRGraph &g, int source)
     auto [d, u] = pq.top();
     pq.pop();
 
-    // Stale entry: a shorter path to u was already finalized.
+    // a shorter path to u was already done.
     if (d > result.distance[u])
       continue;
 
-    for (int idx = g.row_ptr[u]; idx < g.row_ptr[u + 1]; ++idx)
+    for (int idx = csr_graph.row_ptr[u]; idx < csr_graph.row_ptr[u + 1]; ++idx)
     {
-      int v = g.col_idx[idx];
-      double w = g.values[idx];
+      int v = csr_graph.col_idx[idx];
+      double w = csr_graph.values[idx];
       double new_dist = result.distance[u] + w;
+
       if (new_dist < result.distance[v])
       {
         result.distance[v] = new_dist;
-        result.predecessor[v] = u;
+        result.pre_decessor[v] = u;
         pq.push({new_dist, v});
       }
     }
