@@ -9,16 +9,16 @@ This repository contains the C++ implementations, test drivers, and benchmark te
 
 | Algorithm | Test File | Vertices ($V$) | Edges ($E$) | Expected Output | Actual Output | Algorithm Time | Status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Triangle Counting** | `tc_10.txt` | 10 | 20 | Total Triangles + Triplet List | Total Triangles + Triplet List |  | Pass |
-| **Triangle Counting** | `tc_100.txt` | 100 | 300 | Total Triangles + Triplet List | Total Triangles + Triplet List |  | Pass |
-| **Triangle Counting** | `tc_10000.txt` | 10,000 | 20,000 | Total Triangles Count | Total Triangles Count |  | Pass |
-| **Triangle Counting** | `tc_50000.txt` | 50,000 | 100,000 | Total Triangles Count | Total Triangles Count |  | Pass |
-| **Triangle Counting** | `tc_100000.txt` | 100,000 | 200,000 | Total Triangles Count | Total Triangles Count |  | Pass |
-| **Betweenness Centrality** | `bc_10.txt` | 10 | 15 | Centrality per vertex (2 d.p.) | Centrality per vertex (2 d.p.) |  | Pass |
-| **Betweenness Centrality** | `bc_100.txt` | 100 | 200 | Centrality per vertex (2 d.p.) | Centrality per vertex (2 d.p.) |  | Pass |
-| **Betweenness Centrality** | `bc_1000.txt` | 1,000 | 2,000 | Centrality per vertex (2 d.p.) | Centrality per vertex (2 d.p.) |  | Pass |
-| **Betweenness Centrality** | `bc_5000.txt` | 5,000 | 10,000 | Centrality per vertex (2 d.p.) | Centrality per vertex (2 d.p.) |  | Pass |
-| **Betweenness Centrality** | `bc_10000.txt` | 10,000 | 20,000 | Centrality per vertex (2 d.p.) | Centrality per vertex (2 d.p.) |  | Pass |
+| **Triangle Counting** | `tc_10.txt` | 10 | 20 | Total Triangles + Triplet List | Total Triangles + Triplet List | 0 ms | Pass |
+| **Triangle Counting** | `tc_100.txt` | 100 | 300 | Total Triangles + Triplet List | Total Triangles + Triplet List | 0 ms | Pass |
+| **Triangle Counting** | `tc_10000.txt` | 10,000 | 20,000 | Total Triangles Count | Total Triangles Count | 0 ms | Pass |
+| **Triangle Counting** | `tc_50000.txt` | 50,000 | 100,000 | Total Triangles Count | Total Triangles Count | 1.7527 ms | Pass |
+| **Triangle Counting** | `tc_100000.txt` | 100,000 | 200,000 | Total Triangles Count | Total Triangles Count | 3.4997 ms | Pass |
+| **Betweenness Centrality** | `bc_10.txt` | 10 | 15 | Centrality per vertex (2 d.p.) | Centrality per vertex (2 d.p.) | 0 ms | Pass |
+| **Betweenness Centrality** | `bc_100.txt` | 100 | 200 | Centrality per vertex (2 d.p.) | Centrality per vertex (2 d.p.) | 2.17 ms | Pass |
+| **Betweenness Centrality** | `bc_1000.txt` | 1,000 | 2,000 | Centrality per vertex (2 d.p.) | Centrality per vertex (2 d.p.) | 216.077 ms | Pass |
+| **Betweenness Centrality** | `bc_5000.txt` | 5,000 | 10,000 | Centrality per vertex (2 d.p.) | Centrality per vertex (2 d.p.) | 5186.45 ms | Pass |
+| **Betweenness Centrality** | `bc_10000.txt` | 10,000 | 20,000 | Centrality per vertex (2 d.p.) | Centrality per vertex (2 d.p.) | 19980.5 ms | Pass |
 | **Connected Components** | `cc_10.txt` | 10 | 12 | Number of Comps + Node IDs | Number of Comps + Node IDs | 0.001 ms | Pass |
 | **Connected Components** | `cc_100.txt` | 100 | 150 | Number of Comps + Node IDs | Number of Comps + Node IDs | 0.003 ms | Pass |
 | **Connected Components** | `cc_10000.txt` | 10,000 | 20,000 | Number of Comps + Node IDs | Number of Comps + Node IDs | 0.977 ms | Pass |
