@@ -25,6 +25,7 @@ struct MaxFlowResult
 
   vector<int> source_side;
   vector<int> sink_side;
+
   vector<CutEdge> cut_edges;
 
   double execution_time_ms = 0.0;
