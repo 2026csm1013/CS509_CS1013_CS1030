@@ -178,22 +178,18 @@ The same execution commands can be used for the remaining benchmark datasets by 
 
 ## 4. Benchmark Execution Results
 
-### 4.1 Task 1: K-Means Results Table
+### 4.1 K-Means Results Table (Section 10.3)
 
-The following table summarizes the K-Means benchmark results.
-
-| File | N | D | K | Max Iter. | Actual Iter. | WCSS | Time | Status |
+| **File** | **N** | **D** | **K** | **Max Iter.** | **Actual Iter.** | **WCSS** | **Time** | **Status** |
 |:---|---:|---:|---:|---:|---:|---:|---:|:---:|
 | `km_01.txt` | 100 | 2 | 3 | 300 | 2 | 1099.581138 | 0.0000 ms | **Pass** |
 | `km_02.txt` | 1,000 | 2 | 5 | 300 | 2 | 10557.064101 | 0.0000 ms | **Pass** |
 | `km_03.txt` | 10,000 | 5 | 8 | 300 | 2 | 265357.534554 | 1.0020 ms | **Pass** |
 | `km_04.txt` | 100,000 | 5 | 10 | 300 | 2 | 2660665.618849 | 8.9920 ms | **Pass** |
 
-### 4.2 Task 2: FastMap Results Table
+### 4.2 FastMap Results Table (Section 10.4)
 
-The following table summarizes the FastMap benchmark results.
-
-| File | N | Target k | Pivots (per dim) | Avg. Distance Error | Time | Status |
+| **File** | **N** | **Target k** | **Pivots (per dim)** | **Avg. Distance Error** | **Time** | **Status** |
 |:---|---:|---:|:---|---:|---:|:---:|
 | `fm_01.txt` | 10 | 2 | Dim 1: (8, 2), Dim 2: (9, 1) | 0.0000 | 0.0017 ms | **Pass** |
 | `fm_02.txt` | 100 | 2 | Dim 1: (11, 64), Dim 2: (13, 55) | 0.0000 | 0.0357 ms | **Pass** |
