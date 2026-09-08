@@ -8,14 +8,21 @@
 #include "../src/graph.hpp"
 #include "../src/sssp.hpp"
 #include <chrono>
+#if __has_include(<filesystem>)
 #include <filesystem>
+namespace fs = std::filesystem;
+#elif __has_include(<experimental/filesystem>)
+#include <experimental/filesystem>
+namespace fs = std::experimental::filesystem;
+#else
+#error "A filesystem implementation is required to build sssp_driver.cpp"
+#endif
 #include <iomanip>
 #include <iostream>
 #include <algorithm>
 
 using namespace std;
 
-namespace fs = filesystem;
 using Clock = chrono::steady_clock;
 
 static bool run_one_file(const string &path)
