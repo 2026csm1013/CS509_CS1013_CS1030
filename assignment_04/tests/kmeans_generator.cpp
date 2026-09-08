@@ -1,3 +1,5 @@
+//g++ -O3 assignment_04\src\kmeans.cpp -o assignment_04\driver\kmeans_runner.exe
+//
 #include <iostream>
 #include <vector>
 #include <fstream>
@@ -7,7 +9,7 @@
 
 using namespace std;
 
-// generate dataset for kmeans
+
 void makeKMeansFile(const string& filePath, int n, int d, int k, int maxIt, double tol) {
 
     ofstream fout(filePath);
@@ -30,7 +32,7 @@ void makeKMeansFile(const string& filePath, int n, int d, int k, int maxIt, doub
 
         for (int j = 0; j < d; j++) {
 
-            // base offset per cluster + small random spread
+            
             double baseVal = clusterId * 25.0;
             double offset = (rand() % 800) / 100.0;
             double coord = baseVal + offset;
@@ -58,7 +60,7 @@ int main() {
 
     srand(42);
 
-    // generate 4 required assignment datasets
+   
     makeKMeansFile("assignment_04/tests/km_01.txt", 100, 2, 3, 300, 0.0001);
     makeKMeansFile("assignment_04/tests/km_02.txt", 1000, 2, 5, 300, 0.0001);
     makeKMeansFile("assignment_04/tests/km_03.txt", 10000, 5, 8, 300, 0.0001);
